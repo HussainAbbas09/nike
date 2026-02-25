@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Geist-fallback", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+body {
+    background-color: black;
+    color: #fff;
+}
+header {
+    background-color: black;
+    height: 80px;
+    padding: 0 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+#nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.menu {
+    text-decoration: none;
+    color: #ADADAD;
+    font-weight: bolder;
+    font-size: 17px;
+    margin-right: 20px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
+}
+.menu::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #FF9800;
+    transition: width 0.3s ease;
+}
+.menu:hover {
+    color: #fff;
+}
+.menu:hover::after {
+    width: 100%;
+}
+#logo {
+    width: 80px;
+    height: auto;
+}
+.fa-magnifying-glass {
+    font-size: 18px;
+    cursor: pointer;
+}
+#products {
+    margin-top: 50px;
+}
+.shoe {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 32px 82px;
+    position: relative;
+    margin-bottom: 50px;
+}
+h2 {
+    font-size: 56px;
+}
+h3 {
+    font-size: 46px;
+    color: #FF9800;
+}
+h4 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+.des {
+    margin-top: 40px;
+    margin-right: 17px;
+    font-weight: bolder;
+    font-size: 17px;
+    color: #ADADAD;
+    line-height: 1.6;
+}
+p {
+    font-weight: bolder;
+    font-size: 15px;
+    color: #ADADAD;
+}
+button {
+    width: 37%;
+    height: 58px;
+    border-radius: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    background-color: #FF9800;
+    color: #000;
+}
+button:hover {
+    background-color: #fff;
+    color: #FF9800;
+    box-shadow: 0px 8px 20px rgba(255, 152, 0, 0.6);
+}
+button i {
+    font-size: 18px;
+}
+.shoe-img {
+    width: 50%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 0 50px 20px rgba(255, 235, 59, 0.3);
+    border-radius: 20px;
+}
+.shoe-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px 30px rgba(255, 235, 59, 0.5);
+}
+.img {
+    margin-left: -8px;
+    margin-top: 20px;
+    width: 25%;
+}
+/* Target the second shoe image specifically (red one) */
+#products .shoe:nth-child(2) .shoe-img {
+    box-shadow: 0 0 50px 20px rgba(209, 0, 0, 0.3); /* red glow */
+}
+
+/* Hover effect for the red shoe */
+#products .shoe:nth-child(2) .shoe-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px 30px rgba(209, 0, 0, 0.5); /* stronger red glow on hover */
+}
+/* Target second shoe (Red OG SATIN BRED) */
+#products .shoe:nth-child(2) h3 {
+    color: #D10000; /* red text for model name */
+}
+
+#products .shoe:nth-child(2) button {
+    background-color: #D10000; /* red button background */
+    color: #fff; /* text color white for contrast */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for red Add to Cart button */
+#products .shoe:nth-child(2) button:hover {
+    background-color: #fff; /* white on hover */
+    color: #D10000; /* text turns red on hover */
+    box-shadow: 0px 8px 20px rgba(209, 0, 0, 0.6); /* red shadow */
+}
+/* Target third shoe image specifically (blue one) */
+#products .shoe:nth-child(3) .shoe-img {
+    box-shadow: 0 0 50px 20px rgba(46, 46, 255, 0.3); /* blue glow */
+}
+
+/* Hover effect for the blue shoe */
+#products .shoe:nth-child(3) .shoe-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px 30px rgba(46, 46, 255, 0.5); /* stronger blue glow on hover */
+}
+
+/* Target third shoe h3 (model name) */
+#products .shoe:nth-child(3) h3 {
+    color: #2E2EFF; /* blue text for model name */
+}
+
+/* Target third shoe Add to Cart button */
+#products .shoe:nth-child(3) button {
+    background-color: #2E2EFF; /* blue button background */
+    color: #fff; /* text white for contrast */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for blue Add to Cart button */
+#products .shoe:nth-child(3) button:hover {
+    background-color: #fff; /* white on hover */
+    color: #2E2EFF; /* text turns blue on hover */
+    box-shadow: 0px 8px 20px rgba(46, 46, 255, 0.6); /* blue shadow */
+}
